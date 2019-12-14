@@ -68,15 +68,9 @@ public class FileUtils {
      * @return
      */
     public static String getFilePathFromURI(Context context, Uri contentUri) {
-        //copy file and send new file path
-        if(contentUri.toString().contains(context.getApplicationContext().getPackageName())){
+        try {
             return contentUri.toString().substring(6);
-        }
-        String fileName = getFileName(contentUri);
-        if (!TextUtils.isEmpty(fileName)) {
-            File copyFile = new File( Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + fileName);
-            FileUtils.copy(context, contentUri, copyFile);
-            return copyFile.getAbsolutePath();
+        } catch (Exception e) {
         }
         return null;
     }
