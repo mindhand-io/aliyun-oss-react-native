@@ -1,3 +1,5 @@
+# 当前 FORK 版本修复了一些安卓路径解析的问题，能够使得能够从安卓文件目录上传图片
+
 # Alibaba Cloud OSS SDK for React Native
 
 ## [README of Chinese](https://github.com/aliyun/aliyun-oss-react-native/blob/master/README-CN.md)
@@ -350,10 +352,10 @@ parameters:
 
 - name {String} bucket name
 - options {Object}
-  - [delimiter] {String} 
+  - [delimiter] {String}
   - [prefix] {String} search buckets using `prefix` key
   - [marker] {String} search start from `marker`, including `marker` key
-  - [max-keys] {String|Number} max buckets, default is `100`, limit to `1000` 
+  - [max-keys] {String|Number} max buckets, default is `100`, limit to `1000`
 ```
  AliyunOSS.asyncListObjects('luozhang002', {
     prefix:'xxxx'
