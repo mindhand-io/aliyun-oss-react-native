@@ -1,7 +1,7 @@
 const noop = () => {};
 const asyncNoop = () => Promise.resolve();
 
-export default {
+module.exports = {
   enableDevMode: noop,
   initWithPlainTextAccessKey: noop,
   initWithSigner: noop,
